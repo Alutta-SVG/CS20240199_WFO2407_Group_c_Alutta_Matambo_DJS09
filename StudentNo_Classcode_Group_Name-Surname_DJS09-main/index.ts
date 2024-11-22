@@ -56,11 +56,11 @@ const properties : {
         code: number;
         country: string;
     };
-    contact: string;
+    contact: [number, string];
     isAvailable: boolean;
 } [] = [
     {
-       image: '',
+       image: 'michael-jasmund-o51enAB_89A-unsplash',
        title: 'Columbian Shack',
        price: 45,
        location: {
@@ -69,11 +69,11 @@ const properties : {
         code: 10001,
         country: 'USA',
     },
-    contact: 'marywinkle@gmail.com',
+    contact: [+1123495082908,'marywinkle@gmail.com'],
     isAvailable: true
 },
 {
-    image: '',
+    image: 'images/hugo-richard-_fAesnpmWVo-unsplash',
     title: 'Polish Cottage',
     price: 34,
     location: {
@@ -82,11 +82,11 @@ const properties : {
      code: 343903,
      country: 'Poland',
  },
- contact: 'garydavis@hotmail.com',
+ contact: [+1123495082908,'garydavis@hotmail.com'],
  isAvailable: false
 },
 {
-    image: '',
+    image: 'images/deric-MnOFq6BeGFc-unsplash',
     title: 'London Flat',
     price: 23,
     location: {
@@ -95,7 +95,7 @@ const properties : {
      code:  35422,
      country: 'United kingdom',
  },
- contact: 'andylugar@aol.com',
+ contact: [+1123495082908,'andylugar@aol.com'],
  isAvailable: true
 },
 ]
