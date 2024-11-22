@@ -4,33 +4,35 @@
 // : number
 
 import { showReviewTotal, populateUser } from './utils'
-import { Permissions } from './enums'
+import { Permissions, LoyaltyUser} from './enums'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
+
 let isOpen: boolean
+
 
 const reviews :{
     name: string;
     stars: number;
-    loyaltyUser: boolean;
+    loyaltyUser: LoyaltyUser;
     date: string;
 }[] =[
     {
         name: 'Sheia',
         stars: 5,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.GOLD_USER,
         date: '01-04-2021'
     },
     {
         name: 'Andrzej',
         stars: 3,
-        loyaltyUser: false,
+        loyaltyUser: LoyaltyUser.SILVER_USER,
         date: '28-03-2021'
     },
     {
         name: 'Omar',
         stars: 4,
-        loyaltyUser: true,
+        loyaltyUser: LoyaltyUser.BRONZE_USER,
         date: '27-03-2021'
     },
 ]
