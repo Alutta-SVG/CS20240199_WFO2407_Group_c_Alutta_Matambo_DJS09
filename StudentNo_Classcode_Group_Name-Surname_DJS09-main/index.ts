@@ -5,6 +5,7 @@
 
 import { showReviewTotal, populateUser } from './utils'
 import { Permissions, LoyaltyUser} from './enums'
+import {Price, Country} from './types'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
@@ -41,6 +42,7 @@ const you = {
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
+
 //properties
 
 const properties : {
@@ -121,8 +123,8 @@ for (let i = 0; i < properties.length; i++) {
     const image =  document.createElement('img')
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
+    showDetails(you.permissions, card, properties[i].price)
     propertyContainer?.appendChild(card)
-    showDetails({}, card, properties[i].price)
 }
 
  //location
