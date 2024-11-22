@@ -2,8 +2,11 @@
 // Write a function that will only accept numbers and attend to 
 // all TypeScript weakness flags.
 // : number
-const propertyContainer = document.querySelector('.properties')
+
 import { showReviewTotal, populateUser } from './utils'
+import { Permissions } from './enums'
+const propertyContainer = document.querySelector('.properties')
+const footer = document.querySelector('.footer')
 let isOpen: boolean
 
 const reviews :{
@@ -32,15 +35,11 @@ const reviews :{
     },
 ]
 //user
-const you: {
- firstName : string;
-   lastName : string;
-   isReturning: boolean;
-    age: number;
-    stayedAt: string[];
-} = {
+const you = {
+
     firstName: 'Bobby',
     lastName: 'Brown',
+    permissions: Permissions.ADMIN,
     isReturning: true,
     age: 35,
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
