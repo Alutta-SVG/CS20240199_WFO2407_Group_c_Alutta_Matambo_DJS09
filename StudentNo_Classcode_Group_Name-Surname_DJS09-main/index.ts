@@ -34,4 +34,9 @@ function showReviewTotal(value: number, reviewer: string, isLoyalty: boolean) {
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser) // 3 | last reviewed
 
-
+const you: {
+    firstName : string;
+    lastName : string;
+    isReturning: boolean;
+    age: number;
+}
