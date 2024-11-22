@@ -7,7 +7,12 @@ const userNameDisplay = document.querySelector('#user')
 const reviewTotalDisplay = document.querySelector('#reviews')
 let isOpen: boolean
 
-const reviews = [
+const reviews :{
+    name: string;
+    stars: number;
+    loyaltyUser: boolean;
+    date: string;
+}[] =[
     {
         name: 'Sheia',
         stars: 5,
@@ -41,11 +46,13 @@ const you: {
     lastName : string;
     isReturning: boolean;
     age: number;
+    stayedAt: string[];
 } = {
     firstName: 'Bobby',
     lastName: 'Brown',
     isReturning: true,
-    age: 35
+    age: 35,
+    stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 
 console.log(you.userName)
