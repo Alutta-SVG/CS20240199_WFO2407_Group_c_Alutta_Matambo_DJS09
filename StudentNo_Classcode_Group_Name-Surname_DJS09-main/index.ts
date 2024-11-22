@@ -41,4 +41,20 @@ const you: {
     lastName : string;
     isReturning: boolean;
     age: number;
+} = {
+    firstName: 'Bobby',
+    lastName: 'Brown',
+    isReturning: true,
+    age: 35
+}
+
+console.log(you.userName)
+
+function populateUser(isReturning : boolean, userName: string) {
+    if (isReturning) { 
+        returningUserDisplay.innerHTML = 'back'
+}
+userNameDisplay.innerHTML = userName
+{
+    populateUser(you.isReturning, you.userName)
 }
