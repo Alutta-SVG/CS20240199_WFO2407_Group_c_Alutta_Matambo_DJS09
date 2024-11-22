@@ -1,6 +1,6 @@
 module.exports = {
   "output": {
-    "filename": "[name].pack.js"
+    "filename": "index.pack.js"
   },
   "entry": {
     "index": "./index"

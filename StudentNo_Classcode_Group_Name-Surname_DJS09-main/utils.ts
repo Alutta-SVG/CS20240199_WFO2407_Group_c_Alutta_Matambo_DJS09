@@ -14,3 +14,4 @@ export function populateUser(isReturning : boolean, userName: string) {
 }
 userNameDisplay.innerHTML = userName
 }
+ 

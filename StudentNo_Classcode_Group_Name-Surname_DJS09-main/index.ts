@@ -8,15 +8,10 @@ import { Permissions, LoyaltyUser} from './enums'
 const propertyContainer = document.querySelector('.properties')
 const footer = document.querySelector('.footer')
 
-let isOpen: boolean
+let isLoggedIn: boolean
 
 
-const reviews :{
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}[] =[
+const reviews : any [] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -55,7 +50,7 @@ const properties : {
     location:{
         firstLine: string;
         city: string;
-        code: number;
+        code: number; 
         country: string;
     };
     contact: [number, string];
@@ -106,6 +101,18 @@ showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser) // 3 | 
 
 populateUser(you.isReturning, you.firstName)
 
+let authorityStatus : any
+
+isLoggedIn = false
+
+function showDetails(authorityStatus: boolean | Permissions, element : HTMLDivElement, price: number) {
+   if (authorityStatus) {
+       const priceDisplay = document.createElement('div')
+       priceDisplay.innerHTML = price.toString() + '/night'
+       element.appendChild(priceDisplay)
+   }
+}
+
 //add the properties 
 for (let i = 0; i < properties.length; i++) {
     const card = document.createElement('div')
@@ -115,6 +122,7 @@ for (let i = 0; i < properties.length; i++) {
     image.setAttribute('src', properties[i].image)
     card.appendChild(image)
     propertyContainer?.appendChild(card)
+    showDetails({}, card, properties[i].price)
 }
 
  //location
