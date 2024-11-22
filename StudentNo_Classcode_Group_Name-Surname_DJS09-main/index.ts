@@ -119,5 +119,5 @@ for (let i = 0; i < properties.length; i++) {
 
  //location
 let currentLocation =['Cape town','15:36', 17]
-footer.innerHTML = currentLocation[0] +''+ currentLocation[1]+
+footer.innerHTML = currentLocation[0] + ' ' + currentLocation[1] + ' ' + currentLocation[2] + '°'
 
