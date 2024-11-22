@@ -31,11 +31,11 @@ const reviews :{
         date: '27-03-2021'
     },
 ]
-
+//user
 const you: {
-    firstName : string;
-    lastName : string;
-    isReturning: boolean;
+ firstName : string;
+   lastName : string;
+   isReturning: boolean;
     age: number;
     stayedAt: string[];
 } = {
@@ -46,6 +46,7 @@ const you: {
     stayedAt: ['florida-home', 'oman-flat', 'tokyo-bungalow']
 }
 //properties
+
 const properties : {
     image: string;
     title: string;
@@ -114,4 +115,8 @@ for (let i = 0; i < properties.length; i++) {
     card.appendChild(image)
     propertyContainer?.appendChild(card)
 }
+
+ //location
+let currentLocation =['Cape town','15:36', 17]
+footer.innerHTML = currentLocation[0] +''+ currentLocation[1]+
 
