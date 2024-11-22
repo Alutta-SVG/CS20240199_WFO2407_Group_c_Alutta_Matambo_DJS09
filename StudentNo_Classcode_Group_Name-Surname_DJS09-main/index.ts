@@ -59,8 +59,44 @@ const properties : {
     isAvailable: boolean;
 } [] = [
     {
-
-    }
+       image: '',
+       title: 'Columbian Shack',
+       price: 45,
+       location: {
+        firstLine: '123 Main St',
+        city: 'New York',
+        code: 10001,
+        country: 'USA',
+    },
+    contact: 'marywinkle@gmail.com',
+    isAvailable: true
+},
+{
+    image: '',
+    title: 'Polish Cottage',
+    price: 34,
+    location: {
+     firstLine: 'No 23',
+     city: 'Gdansk',
+     code: 343903,
+     country: 'Poland',
+ },
+ contact: 'garydavis@hotmail.com',
+ isAvailable: false
+},
+{
+    image: '',
+    title: 'London Flat',
+    price: 23,
+    location: {
+     firstLine: 'Flat 15',
+     city: 'London',
+     code:  35422,
+     country: 'United kingdom',
+ },
+ contact: 'andylugar@aol.com',
+ isAvailable: true
+},
 ]
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser) // 3 | last reviewed
