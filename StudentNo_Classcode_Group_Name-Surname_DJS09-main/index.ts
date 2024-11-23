@@ -11,10 +11,23 @@ const reviewContainer = document.querySelector('.reviews')
 const container = document.querySelector('.container')
 const footer = document.querySelector('.footer')
 const button = document.querySelector('button')
+
 let isLoggedIn: boolean
 
+enum Permissions {
+    ADMIN = 'ADMIN', 
+    READ_ONLY = 'READ_ONLY'
+}
 
-const reviews : any [] = [
+enum LoyaltyUser {
+    GOLD_USER = 'GOLD_USER',
+    SILVER_USER = 'SILVER_USER',
+    BRONZE_USER = 'BRONZE_USER'
+}
+
+
+
+const reviews : Review [] = [
     {
         name: 'Sheia',
         stars: 5,
@@ -128,13 +141,9 @@ for (let i = 0; i < properties.length; i++) {
     showDetails(you.permissions, card, properties[i].price)
     propertyContainer?.appendChild(card)
 }
+
 let count = 0
-function addReviews(array: {
-    name: string;
-    stars: number;
-    loyaltyUser: LoyaltyUser;
-    date: string;
-}[] ) : void {
+function addReviews(array: Review[]) : void {
     if (!count ) {
         count++
         const topTwo = getTopTwoReviews(array)
@@ -149,7 +158,6 @@ function addReviews(array: {
 }
 
 button.addEventListener('click', () => addReviews(reviews))
-
 
  //location
 let currentLocation =['Cape town','15:36', 17]
