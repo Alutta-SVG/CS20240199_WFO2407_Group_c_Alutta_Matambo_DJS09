@@ -4,8 +4,8 @@
 // : number
 
 import { showReviewTotal, populateUser } from './utils'
-import { Permissions, LoyaltyUser} from './enums'
 import { Price, Country } from './types'
+import { Review } from './interfaces'
 const propertyContainer = document.querySelector('.properties')
 const reviewContainer = document.querySelector('.reviews')
 const container = document.querySelector('.container')
