@@ -6,7 +6,7 @@
 import { showReviewTotal, populateUser } from './utils';
 import { Permissions, LoyaltyUser } from './enums';
 import { Price, Country } from './types';
-import { Review } from './interfaces';
+import { Review } from './StudentNo_Classcode_Group_Name-Surname_DJS09-main/interfaces';
 
 const propertyContainer = document.querySelector('.properties') as HTMLDivElement | null;
 const reviewContainer = document.querySelector('.reviews') as HTMLDivElement | null;
