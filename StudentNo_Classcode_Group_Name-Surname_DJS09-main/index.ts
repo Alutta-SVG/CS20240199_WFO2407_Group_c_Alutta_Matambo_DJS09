@@ -64,7 +64,7 @@ interface Property {
 // Array of Properties
 const properties: Property[] = [
   {
-    image: 'images/colombia-property.jpg',
+    image: 'images/deric-MnOFq6BeGFc-unsplash.jpg',
     title: 'Colombian Shack',
     price: 45,
     location: {
@@ -77,7 +77,7 @@ const properties: Property[] = [
     isAvailable: true,
   },
   {
-    image: 'images/poland-property.jpg',
+    image: 'images/hugo-richard-_fAesnpmWVo-unsplash.jpg',
     title: 'Polish Cottage',
     price: 30,
     location: {
@@ -90,7 +90,7 @@ const properties: Property[] = [
     isAvailable: false,
   },
   {
-    image: 'images/london-property.jpg',
+    image: 'images/long-nguyen-o9ye4vVmFt0-unsplash.jpg',
     title: 'London Flat',
     price: 25,
     location: {
@@ -104,7 +104,7 @@ const properties: Property[] = [
   },
   {
     
-    image: 'images/zoshua-colah-22x-DgOKi7I-unsplash',
+    image: 'images/zoshua-colah-22x-DgOKi7I-unsplash.jpg',
     title: 'Malia Hotel',
     price: 35,
     location: {
@@ -163,7 +163,7 @@ function addReviews(array: Review[]): void {
 button?.addEventListener('click', () => addReviews(reviews));
 
 // Location
-let currentLocation: [string, string, number] = ['London', '11.03', 17];
+let currentLocation: [string, string, number] = ['Cape Town', '11.03', 17];
 footer!.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}°`;
 
 class MainProperty {
@@ -177,7 +177,7 @@ class MainProperty {
   }
 }
 
-let yourMainProperty = new MainProperty('images/michael-jasmund-o51enAB_89A-unsplash', 'Main Property', [
+let yourMainProperty = new MainProperty('images/michael-jasmund-o51enAB_89A-unsplash.jpg', 'Main Property', [
   {
     name: 'Olive',
     stars: 5,
