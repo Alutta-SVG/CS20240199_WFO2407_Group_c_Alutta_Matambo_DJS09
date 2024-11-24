@@ -7,6 +7,7 @@ import { showReviewTotal, populateUser } from './utils';
 import { Permissions, LoyaltyUser } from './enums';
 import { Price, Country } from './types';
 import { Review } from './interfaces';
+import { MainProperty } from './classes';
 
 const propertyContainer = document.querySelector('.properties') as HTMLDivElement | null;
 const reviewContainer = document.querySelector('.reviews') as HTMLDivElement | null;
@@ -151,16 +152,7 @@ button?.addEventListener('click', () => addReviews(reviews));
 let currentLocation: [string, string, number] = ['London', '11.03', 17];
 footer!.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}°`;
 
-class MainProperty {
-  src: string;
-  title: string;
-  reviews: Review[];
-  constructor(src: string, title: string, reviews: Review[]) {
-    this.src = src;
-    this.title = title;
-    this.reviews = reviews;
-  }
-}
+
 
 let yourMainProperty = new MainProperty('images/michael-jasmund-o51enAB_89A-unsplash', 'Main Property', [
   {
