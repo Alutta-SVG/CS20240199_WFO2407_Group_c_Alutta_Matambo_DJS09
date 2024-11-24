@@ -5,7 +5,7 @@ module.exports = {
   entry: './index.ts',
   output: {
     filename: 'index.pack.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'StudentNo_Classcode_Group_Name-Surname_DJS09-main'),
   },
   resolve: {
     extensions: ['.ts', '.js'],

@@ -6,7 +6,7 @@
 import { showReviewTotal, populateUser } from './utils';
 import { Permissions, LoyaltyUser } from './enums';
 import { Price, Country } from './types';
-import { Review } from './StudentNo_Classcode_Group_Name-Surname_DJS09-main/interfaces';
+import { Review } from './interfaces';
 
 const propertyContainer = document.querySelector('.properties') as HTMLDivElement | null;
 const reviewContainer = document.querySelector('.reviews') as HTMLDivElement | null;
@@ -38,7 +38,6 @@ const reviews: Review[] = [
 ];
 
 const you = {
-    
   firstName: 'Bobby',
   lastName: 'Brown',
   permissions: Permissions.ADMIN,
@@ -64,7 +63,7 @@ interface Property {
 // Array of Properties
 const properties: Property[] = [
   {
-    image: 'images/deric-MnOFq6BeGFc-unsplash.jpg',
+    image: 'images/colombia-property.jpg',
     title: 'Colombian Shack',
     price: 45,
     location: {
@@ -77,7 +76,7 @@ const properties: Property[] = [
     isAvailable: true,
   },
   {
-    image: 'images/hugo-richard-_fAesnpmWVo-unsplash.jpg',
+    image: 'images/poland-property.jpg',
     title: 'Polish Cottage',
     price: 30,
     location: {
@@ -90,7 +89,7 @@ const properties: Property[] = [
     isAvailable: false,
   },
   {
-    image: 'images/long-nguyen-o9ye4vVmFt0-unsplash.jpg',
+    image: 'images/london-property.jpg',
     title: 'London Flat',
     price: 25,
     location: {
@@ -102,20 +101,6 @@ const properties: Property[] = [
     contact: [+34829374892553, 'andyluger@aol.com'],
     isAvailable: true,
   },
-  {
-    
-    image: 'images/zoshua-colah-22x-DgOKi7I-unsplash.jpg',
-    title: 'Malia Hotel',
-    price: 35,
-    location: {
-        firstLine: 'Room 4',
-        city: 'Malia',
-        code: 45334,
-        country: 'Malaysia'
-    },
-    contact: [ +60349822083, 'lee34@gmail.com'],
-    isAvailable: false
-  }
 ];
 
 showReviewTotal(reviews.length, reviews[0].name, reviews[0].loyaltyUser); // 3 | last reviewed
@@ -163,7 +148,7 @@ function addReviews(array: Review[]): void {
 button?.addEventListener('click', () => addReviews(reviews));
 
 // Location
-let currentLocation: [string, string, number] = ['Cape Town', '11.03', 17];
+let currentLocation: [string, string, number] = ['London', '11.03', 17];
 footer!.innerHTML = `${currentLocation[0]} ${currentLocation[1]} ${currentLocation[2]}°`;
 
 class MainProperty {
@@ -177,7 +162,7 @@ class MainProperty {
   }
 }
 
-let yourMainProperty = new MainProperty('images/michael-jasmund-o51enAB_89A-unsplash.jpg', 'Main Property', [
+let yourMainProperty = new MainProperty('images/michael-jasmund-o51enAB_89A-unsplash', 'Main Property', [
   {
     name: 'Olive',
     stars: 5,
